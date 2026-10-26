@@ -44,7 +44,7 @@
                     <DockPanel Grid.Row="0" LastChildFill="False">
                         <StackPanel DockPanel.Dock="Left">
                             <TextBlock Text="DYNAMIC NOTCH" Foreground="#FFBFC2CC" FontSize="9"
-                                       FontWeight="SemiBold" CharacterSpacing="150"/>
+                                       FontWeight="SemiBold"/>
                             <TextBlock x:Name="Headline" Text="Your system at a glance" Foreground="White"
                                        FontSize="17" FontWeight="SemiBold" Margin="0,4,0,0"/>
                         </StackPanel>
@@ -61,7 +61,7 @@
                         <Border Grid.Column="0" CornerRadius="13" Background="#19FFFFFF" BorderBrush="#20FFFFFF"
                                 BorderThickness="1" Padding="12">
                             <StackPanel>
-                                <TextBlock Text="BATTERY" Foreground="#FFB9BBC5" FontSize="9" CharacterSpacing="90"/>
+                                <TextBlock Text="BATTERY" Foreground="#FFB9BBC5" FontSize="9"/>
                                 <TextBlock x:Name="BatteryValue" Text="--" Foreground="White" FontSize="22"
                                            FontWeight="SemiBold" Margin="0,5,0,0"/>
                                 <TextBlock x:Name="BatteryState" Text="Checking…" Foreground="#FFC9CBD3"
@@ -71,7 +71,7 @@
                         <Border Grid.Column="2" CornerRadius="13" Background="#19FFFFFF" BorderBrush="#20FFFFFF"
                                 BorderThickness="1" Padding="12">
                             <StackPanel>
-                                <TextBlock Text="PROCESSOR" Foreground="#FFB9BBC5" FontSize="9" CharacterSpacing="55"/>
+                                <TextBlock Text="PROCESSOR" Foreground="#FFB9BBC5" FontSize="9"/>
                                 <TextBlock x:Name="CpuValue" Text="--%" Foreground="White" FontSize="22"
                                            FontWeight="SemiBold" Margin="0,5,0,0"/>
                                 <TextBlock Text="Total CPU load" Foreground="#FFC9CBD3" FontSize="10"/>
@@ -80,7 +80,7 @@
                         <Border Grid.Column="4" CornerRadius="13" Background="#19FFFFFF" BorderBrush="#20FFFFFF"
                                 BorderThickness="1" Padding="12">
                             <StackPanel>
-                                <TextBlock Text="MEMORY" Foreground="#FFB9BBC5" FontSize="9" CharacterSpacing="75"/>
+                                <TextBlock Text="MEMORY" Foreground="#FFB9BBC5" FontSize="9"/>
                                 <TextBlock x:Name="RamValue" Text="--%" Foreground="White" FontSize="22"
                                            FontWeight="SemiBold" Margin="0,5,0,0"/>
                                 <TextBlock x:Name="RamState" Text="RAM usage" Foreground="#FFC9CBD3" FontSize="10"/>
