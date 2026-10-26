@@ -32,7 +32,7 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Ellipse x:Name="StatusDot" Width="5" Height="5" Fill="#FFB8F4D0" Margin="0,0,7,0"/>
                         <TextBlock x:Name="CompactText" Text="SILENTREAPER" Foreground="#FFECECF1"
-                                   FontSize="9" FontWeight="SemiBold" CharacterSpacing="110" VerticalAlignment="Center"/>
+                                   FontSize="9" FontWeight="SemiBold" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Grid>
                 <Grid x:Name="ExpandedView" Visibility="Collapsed" Margin="22,18,22,16">
