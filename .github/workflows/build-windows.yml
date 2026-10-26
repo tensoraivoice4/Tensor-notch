@@ -1,0 +1,43 @@
+name: Build Windows app
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Install .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish Windows x64 app
+        shell: pwsh
+        run: >
+          dotnet publish .\SILENTREAPER.DynamicNotch.csproj
+          -c Release -r win-x64 --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:EnableCompressionInSingleFile=true
+          -o .\publish
+      - name: Package app
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force .\release | Out-Null
+          Copy-Item .\publish\SILENTREAPER.DynamicNotch.exe .\release\
+          Copy-Item .\README.md .\release\
+          Compress-Archive -Path .\release\* -DestinationPath .\SILENTREAPER-DynamicNotch-win-x64.zip -Force
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SILENTREAPER-DynamicNotch-win-x64
+          path: SILENTREAPER-DynamicNotch-win-x64.zip
+          if-no-files-found: error
+          retention-days: 30
